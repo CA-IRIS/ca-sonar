@@ -113,7 +113,7 @@ public class TypeCache<T extends SonarObject> implements Iterable<T> {
 	}
 
 	/** Notify proxy listeners that a proxy has been changed */
-	protected void notifyProxyChanged(T proxy, String a) {
+	public void notifyProxyChanged(T proxy, String a) {
 		for(ProxyListener<T> l: listeners)
 			l.proxyChanged(proxy, a);
 	}
